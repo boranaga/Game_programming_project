@@ -1,19 +1,22 @@
 # Game_programming_project
 
+# Pygame 초기화, 화면 설정, 색깔 정의
 import pygame
 import sys
 import math
 import random
 
-# Pygame 초기화
 pygame.init()
 
-# 화면 설정
 width, height = 1000, 800
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Fluid Simulator")
 
-# 색깔 정의
+blue = (0, 0, 255)
+red = (255, 0, 0)
+green = (0, 255, 0)
+black = (0, 0, 0)
+
 blue = (0, 0, 255)
 red = (255, 0, 0)
 green = (0, 255, 0)
@@ -223,10 +226,10 @@ num_red_particles = 25
 num_green_particles = 10
 num_white_particles = 3
 
-# num_blue_particles = 1
-# num_red_particles = 1
-# num_green_particles = 1
-# num_white_particles = 1
+    # num_blue_particles = 1
+    # num_red_particles = 1
+    # num_green_particles = 1
+    # num_white_particles = 1
 
 
 blue_particles = [BlueFluidParticle(
@@ -357,10 +360,6 @@ while True:
                 (blue_particles + red_particles + green_particles + white_particles)[i],
                 (blue_particles + red_particles + green_particles + white_particles)[j]
             )
-
-
-
-
 
     # 화면 그리기
     screen.fill(black)
